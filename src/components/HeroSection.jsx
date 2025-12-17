@@ -15,8 +15,10 @@ export const HeroSection = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-width-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                    Mastering DSA with C++ while building full-stack and Python-based projects to strengthen my
-                    foundations and expand my skills. Beyond coding, I channel creativity through chibi art.
+                    {/* Mastering DSA with C++ while building full-stack and Python-based projects to strengthen my
+                    foundations and expand my skills. Beyond coding, I channel creativity through chibi art. */}
+                    Code geek mastering DSA and building full-stack experiences.
+                    Building, learning, and evolving - one line of code at a time.
                 </p>
 
                 <div className="pt-4 opacity-0 animate-fade-in-delay-4">
