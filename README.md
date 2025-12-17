@@ -128,10 +128,6 @@ Dynamic star generation based on viewport size with customizable:
 ### Theme Toggle
 Persistent dark/light mode with smooth transitions across all components.
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## 👤 Author
 
 **Hydralgorithm**
