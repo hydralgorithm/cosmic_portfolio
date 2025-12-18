@@ -22,7 +22,7 @@ const projects = [
         title: "Cosmic-Portfolio",
         description: "Modern React portfolio with cosmic theme, animated stars, and smooth transitions.",
         image: "/projects/portfolio_home.png",
-        tags: ["React", "html/css", "node.js"],
+        tags: ["React", "Tailwind CSS", "node.js"],
         demoUrl: "#",
         githubUrl: "https://github.com/hydralgorithm/32214143425_portfolio",
     },
