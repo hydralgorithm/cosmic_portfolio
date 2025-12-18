@@ -24,7 +24,7 @@ const projects = [
         image: "/projects/portfolio_home.png",
         tags: ["React", "html/css", "node.js"],
         demoUrl: "#",
-        githubUrl: "https://github.com/hydralgorithm/cosmic_portfolio",
+        githubUrl: "https://github.com/hydralgorithm/32214143425_portfolio",
     },
 ];
 
