@@ -3,11 +3,13 @@ import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
+import MusicPlayer from "@/components/MusicPlayer";
 
 function App() {
   return (
     <>
     <Toaster />
+    <MusicPlayer />
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />}/>
