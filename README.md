@@ -103,67 +103,6 @@ npm run dev
 - **`npm run preview`** - Preview production build locally
 - **`npm run lint`** - Run ESLint for code quality checks
 
-## 🎨 Customization
-
-### 🎨 Theme Colors
-
-The portfolio uses CSS variables for easy theme customization. Edit `src/index.css` to change colors:
-
-```css
-:root {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
-  --primary: 250 47% 60%;
-  --border: 214 32% 91%;
-}
-
-.dark {
-  --background: 222 47% 4%;
-  --foreground: 213 31% 91%;
-  --primary: 250 65% 65%;
-  --border: 217 33% 20%;
-}
-```
-
-### 📝 Personal Information
-
-Update the following files with your information:
-
-**Components to Edit:**
-- `src/components/HeroSection.jsx` - Your name, title, and introduction
-- `src/components/AboutSection.jsx` - Your bio, contact details, and CV link
-- `src/components/SkillsSection.jsx` - Your skills and proficiency levels
-- `src/components/ProjectsSection.jsx` - Your projects with images and links
-- `src/components/ContactSection.jsx` - Contact information and social media links
-- `src/components/Footer.jsx` - Copyright and footer links
-
-**Assets to Replace:**
-- `public/favicon/` - Your favicon image
-- `public/cv_file/` - Your CV/resume PDF
-- `public/projects/` - Project screenshots
-
-### 🎯 SEO & Meta Tags
-
-Update meta tags in `index.html`:
-
-```html
-<meta name="description" content="Your description" />
-<title>Your Name - Portfolio</title>
-```
-
-### 🧭 Navigation Items
-
-Modify the `navItems` array in `src/components/Navbar.jsx`:
-
-```javascript
-const navItems = [
-  {name: "Home", href: "#hero"},
-  {name: "About", href: "#about"},
-  {name: "Skills", href: "#skills"},
-  {name: "Projects", href: "#projects"},
-  {name: "Contact", href: "#contact"},
-];
-```
 
 ## 🌟 Features in Detail
 
@@ -192,76 +131,12 @@ Dynamic star generation based on viewport size with customizable:
 - Social media integration (LinkedIn, Instagram, Discord)
 - Direct email and phone links
 
-### 🎯 Skills Display
-- Interactive progress bars with smooth animations
-- Categorized skills (Languages, Frontend, Backend, DevTools, Prototyping)
-- Visual proficiency indicators
-- Hover effects for enhanced interactivity
 
-## 🚀 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Visit [Vercel](https://vercel.com)
-3. Import your repository
-4. Vercel will auto-detect Vite and configure build settings
-5. Click "Deploy"
-
-**Build Configuration:**
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Install Command: `npm install`
-
-### Deploy to Netlify
-
-1. Push your code to GitHub
-2. Visit [Netlify](https://netlify.com)
-3. Click "Add new site" → "Import an existing project"
-4. Select your repository
-5. Configure build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-6. Click "Deploy"
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
 **Abdul Fattah (Hydralgorithm)**
 
-- 🌐 Portfolio: [Coming Soon]
-- 💼 GitHub: [@hydralgorithm](https://github.com/hydralgorithm)
-- 📧 Email: hydralgorithm@gmail.com
-- 📍 Location: Bengaluru, Karnataka, India
-
-## 🙏 Acknowledgments
-
-- React team for the amazing framework
-- Vite team for the lightning-fast build tool
-- Tailwind CSS for the utility-first CSS framework
-- Radix UI for accessible component primitives
-- Lucide React for beautiful icons
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/hydralgorithm/cosmic_portfolio/issues).
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## ⭐ Show Your Support
 
@@ -270,7 +145,6 @@ Give a ⭐️ if you like this project and find it helpful!
 ---
 
 <div align="center">
-  <p>Made with ❤️ and ☕ by Abdul Fattah</p>
   <p>© 2025 Abdul Fattah. All rights reserved.</p>
 </div>
 
