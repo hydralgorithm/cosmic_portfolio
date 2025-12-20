@@ -1,6 +1,8 @@
 import { ArrowDown } from "lucide-react";
 
 export const HeroSection = () => {
+    const playWhoosh = () => new Audio('/sounds/whoosh.mp3').play();
+
     return (
     <section 
         id="hero" 
@@ -22,7 +24,7 @@ export const HeroSection = () => {
                 </p>
 
                 <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                    <a href="#projects" className="cosmic-button">
+                    <a href="#projects" className="cosmic-button" onClick={playWhoosh}>
                         View My Work
                     </a>
                 </div>

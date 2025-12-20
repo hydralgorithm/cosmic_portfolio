@@ -145,14 +145,27 @@
          hover:scale-105 active:scale-95;
 }
 
-@utility star {
-  @apply absolute rounded-full bg-white;
+/* Dark theme stars */
+.star-dark {
+  @apply bg-white;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
-@utility meteor {
-  @apply absolute bg-gradient-to-r from-white via-white to-transparent rounded-full;
+/* Light theme stars - purplish sparkles */
+.star-light {
+  box-shadow: 0 0 8px 3px rgba(139, 92, 246, 0.5);
+}
+
+/* Dark theme meteors */
+.meteor-dark {
+  @apply bg-gradient-to-r from-white via-white to-transparent;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Light theme meteors - purple/violet streaks */
+.meteor-light {
+  @apply bg-gradient-to-r from-violet-500 via-purple-400 to-transparent;
+  box-shadow: 0 0 12px 4px rgba(139, 92, 246, 0.4);
 }
 
 #root {
