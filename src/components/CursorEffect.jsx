@@ -201,31 +201,46 @@ export const CursorEffect = () => {
 
     return (
         <div className="fixed inset-0 pointer-events-none z-50">
-            {flamePath && (
-                <svg className="absolute inset-0 w-full h-full overflow-visible">
-                    <defs>
-                        <linearGradient id="flameGradient" gradientUnits="userSpaceOnUse"
-                            x1={trail[0]?.x || 0} y1={trail[0]?.y || 0}
-                            x2={trail[trail.length - 1]?.x || 0} y2={trail[trail.length - 1]?.y || 0}>
-                            <stop offset="0%" stopColor="#c4b5fd" stopOpacity="0.9" />
-                            <stop offset="30%" stopColor="#a78bfa" stopOpacity="0.7" />
-                            <stop offset="60%" stopColor="#8b5cf6" stopOpacity="0.4" />
-                            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
-                        </linearGradient>
-                        <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                        </filter>
-                    </defs>
+            <svg className="absolute inset-0 w-full h-full overflow-visible">
+                <defs>
+                    <linearGradient id="flameGradient" gradientUnits="userSpaceOnUse"
+                        x1={trail[0]?.x || 0} y1={trail[0]?.y || 0}
+                        x2={trail[trail.length - 1]?.x || 0} y2={trail[trail.length - 1]?.y || 0}>
+                        <stop offset="0%" stopColor="#c4b5fd" stopOpacity="0.9" />
+                        <stop offset="30%" stopColor="#a78bfa" stopOpacity="0.7" />
+                        <stop offset="60%" stopColor="#8b5cf6" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="#7c3aed" stopOpacity="0" />
+                    </linearGradient>
+                    <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                    <radialGradient id="cursorGlow">
+                        <stop offset="0%" stopColor="#c4b5fd" stopOpacity="0.8" />
+                        <stop offset="60%" stopColor="#a78bfa" stopOpacity="0.4" />
+                        <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+                    </radialGradient>
+                </defs>
 
+                {/* Flame trail */}
+                {flamePath && (
                     <path
                         d={flamePath}
                         fill="url(#flameGradient)"
                         filter="url(#flameGlow)"
                         opacity={trail[0]?.opacity || 0}
                     />
-                </svg>
-            )}
+                )}
+
+                {/* Persistent glow circle at cursor */}
+                <circle
+                    cx={mousePos.current.x}
+                    cy={mousePos.current.y}
+                    r={8}
+                    fill="url(#cursorGlow)"
+                    filter="url(#flameGlow)"
+                />
+            </svg>
         </div>
     );
 };
