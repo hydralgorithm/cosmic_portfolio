@@ -1,26 +1,27 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
-import { cn } from "@/lib/utils"
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import Spline from '@splinetool/react-spline';
+// import { cn } from "@/lib/utils"
+// import { useToast } from "@/hooks/use-toast";
+// import { useState } from "react";
 
 export const ContactSection = () => {
-    const {toast} = useToast();
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    // const {toast} = useToast();
+    // const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        setIsSubmitting(true);
+    //     setIsSubmitting(true);
 
-        setTimeout(() => {
-            toast({
-                title: "Message sent!",
-                description: "Thank you for your message. I'll get back to you soon."
-            });
-            setIsSubmitting(false);
-        }, 1500);
-    };
+    //     setTimeout(() => {
+    //         toast({
+    //             title: "Message sent!",
+    //             description: "Thank you for your message. I'll get back to you soon."
+    //         });
+    //         setIsSubmitting(false);
+    //     }, 1500);
+    // };
     return (
         <section 
             id="contact" 
@@ -91,6 +92,13 @@ export const ContactSection = () => {
                         </div>
                     </div>
 
+                    <div className="bg-card pt-8 px-8 pb-2 rounded-lg shadow-xs h-[400px] relative overflow-hidden">
+                        <Spline scene="https://prod.spline.design/IDCcvFQUaH7U4n2h/scene.splinecode" />
+                        {/* Cover div to hide watermark */}
+                        <div className="absolute bottom-0 left-0 right-0 h-17 bg-card pointer-events-none" />
+                    </div>
+
+                    {/* Commented out email form - no API connected
                     <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
                         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
                         
@@ -142,6 +150,7 @@ export const ContactSection = () => {
                             </button>
                         </form>
                     </div>
+                    */}
                 </div>
             </div>
         </section>
