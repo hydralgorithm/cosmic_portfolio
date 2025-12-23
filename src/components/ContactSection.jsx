@@ -1,10 +1,12 @@
-import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { FaDiscord } from 'react-icons/fa';
-import { cn } from "@/lib/utils"
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { SpaceshipDodgingMeteors } from "./SpaceshipAnimation";
+// import { cn } from "@/lib/utils"
+// import { useToast } from "@/hooks/use-toast";
+// import { useState } from "react";
 
 export const ContactSection = () => {
+    /* Commented out - form functionality not connected to API
     const {toast} = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,6 +23,8 @@ export const ContactSection = () => {
             setIsSubmitting(false);
         }, 1500);
     };
+    */
+    
     return (
         <section 
             id="contact" 
@@ -91,6 +95,12 @@ export const ContactSection = () => {
                         </div>
                     </div>
 
+                    {/* Spaceship Animation replaces the contact form */}
+                    <div className="bg-card p-8 rounded-lg shadow-xs min-h-[420px] flex items-center justify-center">
+                        <SpaceshipDodgingMeteors />
+                    </div>
+
+                    {/* Commented out contact form - not connected to API
                     <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
                         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
                         
@@ -142,6 +152,7 @@ export const ContactSection = () => {
                             </button>
                         </form>
                     </div>
+                    */}
                 </div>
             </div>
         </section>
